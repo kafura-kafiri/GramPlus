@@ -1,0 +1,137 @@
+/* ------------------------------ *\
+  msg be patient that we can make
+  any border thickness for arrow.
+\* ------------------------------ */
+
+html {
+  background-color: #ff90be;;
+}
+
+$msg_padding: 0px;
+$msg_border_radius_x: 7px;
+$msg_border_radius_y: 9px;
+$msg_border_thickness: 1px;
+
+.dummy-size {
+  width: 190px;
+
+  /* height: 130px; /* it's better to not having this */
+}
+
+.msg {
+  padding: $msg_padding $msg_padding;
+}
+
+.msg {
+  /* overflow: hidden; /* for developing */
+}
+
+.msg {
+  border-radius: $msg_border_radius_x;
+}
+
+/* dummy */
+.msg.salmon {
+  background-color: rgb(245,173,119);
+  color: rgb(255,242,231);
+}
+
+.msg.milky {
+  background-color: rgb(255,255,255);
+  color: rgb(200,203,219);
+}
+
+.msg {
+  position: relative;
+  border: $msg_border_thickness solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px / 12px;
+}
+
+.msg.milky {
+  border-color: rgb(200,203,219);
+}
+
+.msg.salmon {
+  border-color: rgb(255,242,231);
+}
+
+.msg.arrow.left:before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: -8px;
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  border: solid $msg_border_thickness transparent;
+  transform: rotate(45deg);
+}
+
+.msg.arrow.left:after {
+  content: "";
+  position: absolute;
+  top: 57px;
+  left: -18px;
+  z-index: 1;
+  border: solid 9px transparent;
+  border-right-color: salmon;
+}
+
+.msg.arrow.right:before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: -8px;
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  border: solid $msg_border_thickness transparent;
+  transform: rotate(45deg);
+}
+
+.msg.arrow.right:after {
+  content: "";
+  position: absolute;
+  top: 57px;
+  right: -18px;
+  z-index: 1;
+  border: solid 9px transparent;
+}
+
+.msg.arrow.milky:before {
+    border-color: rgb(200,203,219);
+}
+
+.msg.arrow.salmon:before {
+    border-color: rgb(255,242,231);
+}
+
+.msg.arrow.milky.right:after {
+  border-left-color: rgb(255,255,255);;
+}
+
+.msg.arrow.salmon.right:after {
+  border-left-color: rgb(245,173,119);;
+}
+
+.msg.arrow.milky.left:after {
+  border-right-color: rgb(255,255,255);;
+}
+
+.msg.arrow.salmon.left:after {
+  border-right-color: rgb(245,173,119);;
+}
+
+.msg.right {
+  float: right;
+}
+
+.msg {
+  clear: both;
+}
+
+.msg.left {
+  float: left;
+}

@@ -1,0 +1,83 @@
+$list-chat_width: 165px;
+$list-chat_height: 30px;
+$list-chat_thickness: 3px;
+$list-chat_color: rgba(100, 100, 100, .5);
+$case_color: white;
+$cases_cnt: 2;
+$rel-z-index: 5;
+
+$salmon: rgb(245,173,119);
+$milky: #fff4fd;
+
+.capsule {
+  border-radius: 500px;
+  overflow: hidden;
+}
+
+.capsule.thick.list-chat {
+  display: inline-table;
+  margin-left: calc(50% - 120px);
+  top: -10px;
+}
+
+.capsule.thick {
+  border: $list-chat_color $list-chat_thickness solid;
+}
+
+.capsule.list-chat {
+  width: $list-chat_width;
+  height: $list-chat_height;
+  background-color: $list-chat_color;
+}
+
+/* we keep going until z-index lack. */
+.capsule.list-chat {
+  position: relative;
+  z-index: -2 + $rel-z-index;
+}
+
+.switch {
+  width: 100% * ($cases_cnt + 1) / $cases_cnt;
+}
+
+.case {
+  /* we have to make it position relative to have permission to set z-index *\
+  \*  */
+  z-index: $rel-z-index;
+  position: relative;
+  display: inline-block;
+  
+  width: 100% / ($cases_cnt + 1);
+  margin: 0 -2px;
+  border-radius: 4px;
+  color: $salmon;
+}
+
+/* .case {
+  background-color: rgba(100, 100, 100, .1);
+} */
+
+.case + .case {
+}
+
+.case {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;       /* the same as your div height */
+}
+
+.case.roller {
+  color: red;
+  position: relative;
+  top: 0px;
+}
+
+.case.roller {
+  left: -$list-chat_width;
+  z-index: -1 + $rel-z-index;
+  background-color: $milky;
+}
+
+.case.btn:hover {
+  cursor: pointer;
+}

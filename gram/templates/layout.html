@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="html" lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  {% for link in links.css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename=link) }}" />
+  {% endfor %}
+
+  {% for link in links.js.head %}
+    <script src="{{ url_for('static', filename=link) }}"></script>
+  {% endfor %}
+
+</head>
+<body>
+<div class="screen" style="overflow: visible">
+
+  <div class="roll">
+    {% include 'roll/roll.html' %}
+  </div>
+
+  <div class="fix">
+    {% include 'fix/fix.html' %}
+  </div>
+
+</div>
+
+  {% for link in links.js.body %}
+    <script src="{{ url_for('static', filename=link) }}"></script>
+  {% endfor %}
+
+</body>
+</html>

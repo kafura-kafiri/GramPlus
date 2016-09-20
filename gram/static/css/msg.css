@@ -1,0 +1,109 @@
+/* ------------------------------ *\
+  msg be patient that we can make
+  any border thickness for arrow.
+\* ------------------------------ */
+html {
+  background-color: #ff90be; }
+
+.dummy-size {
+  width: 190px;
+  /* height: 130px; /* it's better to not having this */ }
+
+.msg {
+  padding: 0px 0px; }
+
+.msg {
+  /* overflow: hidden; /* for developing */ }
+
+.msg {
+  border-radius: 7px; }
+
+/* dummy */
+.msg.salmon {
+  background-color: #f5ad77;
+  color: #fff2e7; }
+
+.msg.milky {
+  background-color: white;
+  color: #c8cbdb; }
+
+.msg {
+  position: relative;
+  border: 1px solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px / 12px; }
+
+.msg.milky {
+  border-color: #c8cbdb; }
+
+.msg.salmon {
+  border-color: #fff2e7; }
+
+.msg.arrow.left:before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: -8px;
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  border: solid 1px transparent;
+  transform: rotate(45deg); }
+
+.msg.arrow.left:after {
+  content: "";
+  position: absolute;
+  top: 57px;
+  left: -18px;
+  z-index: 1;
+  border: solid 9px transparent;
+  border-right-color: salmon; }
+
+.msg.arrow.right:before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: -8px;
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  border: solid 1px transparent;
+  transform: rotate(45deg); }
+
+.msg.arrow.right:after {
+  content: "";
+  position: absolute;
+  top: 57px;
+  right: -18px;
+  z-index: 1;
+  border: solid 9px transparent; }
+
+.msg.arrow.milky:before {
+  border-color: #c8cbdb; }
+
+.msg.arrow.salmon:before {
+  border-color: #fff2e7; }
+
+.msg.arrow.milky.right:after {
+  border-left-color: white; }
+
+.msg.arrow.salmon.right:after {
+  border-left-color: #f5ad77; }
+
+.msg.arrow.milky.left:after {
+  border-right-color: white; }
+
+.msg.arrow.salmon.left:after {
+  border-right-color: #f5ad77; }
+
+.msg.right {
+  float: right; }
+
+.msg {
+  clear: both; }
+
+.msg.left {
+  float: left; }
+
+/*# sourceMappingURL=msg.css.map */

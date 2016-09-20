@@ -1,0 +1,41 @@
+/* out */ $fix_head-height: 22px;
+
+$marble-radius: 7px;
+$marbles-margin-top: $fix_head-height / 2 - $marble-radius;
+$marbles-margin-left: $marbles-margin-top;
+
+.marbles {
+  margin-top: $marbles-margin-top;
+  margin-left: $marbles-margin-left;
+}
+
+.marbles.inline > .marble {
+  display: inline-block;
+}
+
+.marble {
+  border-radius: 50%;
+  height: $marble-radius * 2;
+  width: $marble-radius * 2;
+}
+
+.marble + .marble {
+  margin-left: 1px;
+}
+
+.marble.btn:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.red {
+  background-color: #ec3600;
+}
+
+.green {
+  background-color: #00db3f;
+}
+
+.yellow {
+  background-color: #ffdb00;
+}

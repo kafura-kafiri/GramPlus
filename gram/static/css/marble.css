@@ -1,0 +1,30 @@
+/* out */
+.marbles {
+  margin-top: 4px;
+  margin-left: 4px; }
+
+.marbles.inline > .marble {
+  display: inline-block; }
+
+.marble {
+  border-radius: 50%;
+  height: 14px;
+  width: 14px; }
+
+.marble + .marble {
+  margin-left: 1px; }
+
+.marble.btn:hover {
+  background-color: transparent;
+  cursor: pointer; }
+
+.red {
+  background-color: #ec3600; }
+
+.green {
+  background-color: #00db3f; }
+
+.yellow {
+  background-color: #ffdb00; }
+
+/*# sourceMappingURL=marble.css.map */

@@ -1,0 +1,131 @@
+/* ------------------ *\
+  these are perfect
+\* ------------------ */
+.list > .bed-status {
+  margin: 0 1px;
+  border-bottom: black solid 1px;
+  background-color: white; }
+
+.list > .bed-status {
+  height: 70px;
+  width: calc(100% - 2 * 1px); }
+
+.one-line {
+  text-align: left; }
+
+/*------------------------------*\
+    Grid System
+\*------------------------------*/
+.row,
+.column {
+  box-sizing: border-box; }
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table; }
+
+.row:after {
+  clear: both; }
+
+.column {
+  position: relative;
+  float: left;
+  display: block; }
+
+.column + .column {
+  margin-left: 0%; }
+
+.column.column-avatar + .column.column-remaining {
+  margin-left: 10px; }
+
+.column-1 {
+  width: 8.33333%; }
+
+.column-2 {
+  width: 16.66667%; }
+
+.column-3 {
+  width: 25%; }
+
+.column-4 {
+  width: 33.33333%; }
+
+.column-5 {
+  width: 41.66667%; }
+
+.column-6 {
+  width: 50%; }
+
+.column-7 {
+  width: 58.33333%; }
+
+.column-8 {
+  width: 66.66667%; }
+
+.column-9 {
+  width: 75%; }
+
+.column-10 {
+  width: 83.33333%; }
+
+.column-11 {
+  width: 91.66667%; }
+
+.column-12 {
+  width: 100%; }
+
+.column-square {
+  width: 70px; }
+
+.column-avatar {
+  width: 35px; }
+
+.column-square + .column-remaining {
+  width: calc(100% - 0% - 70px); }
+
+.column-avatar + .column-remaining {
+  width: calc(100% - 10px - 35px); }
+
+.column-12, .column-remaining {
+  margin-left: 0; }
+
+/*------------------------------*\
+    Styling
+\*------------------------------*/
+.column-square, .column-avatar {
+  background-color: rgba(0, 255, 255, 0.1);
+  /* $status_background-color; */
+  /* width: 20px; */ }
+
+.column-remaining {
+  background-color: rgba(255, 255, 0, 0.1);
+                                         /* $status_background-color;
+/* width: 20px; */ }
+
+.column {
+  /* for height */
+  /* height: 100% */
+  /* $status_height */ }
+
+.reply > .row > .column {
+  height: 70px; }
+
+.list > .row > .column {
+  height: 70px; }
+
+.chat > .row > .column-avatar {
+  height: 35px; }
+
+.row {
+  /*margin-bottom: 10px;*/ }
+
+.row:last-child {
+  /*margin-bottom: 0;*/ }
+
+.column .column {
+  /*color: #eee;
+  background: #333;
+  border-color: #000;*/ }
+
+/*# sourceMappingURL=list.css.map */

@@ -1,0 +1,147 @@
+$screen-width: 285px;
+$screen-height: 490px;
+$screen-border-radius: 7px;
+
+$fix_head-height: 22px;
+$fix_foot-height: 10px;
+
+$salmon: rgba(245,173,119, 1.0);
+$beige-border: rgba(253,232,218, 1.0);
+$beige: rgba(255,242,231, 1.0);
+
+$cancel-size: 40px;
+$cancel-padding: 8px;
+
+$tour-leader_color: rgba(0, 199, 223, 0.4);
+$tour-leader_height: 22px;
+$tour-leader_width: 150px;
+
+.html {
+  background-color: rgb(161,148,140);
+}
+
+.tour-leader {
+  background-color: $tour-leader_color;
+  right: 0;
+  left: 60px;
+  top: 0;
+
+  height: $fix_head-height;
+  z-index: 199;
+}
+
+.screen {
+  width: $screen-width;
+  height: $screen-height;
+
+  border-radius: $screen-border-radius;
+  overflow: visible;
+
+  background-color: $beige-border;
+}
+
+.fix {
+  height: 100%;
+}
+
+.fix, .fix > .head, .fix > .body, .fix > .foot, .fix > .body > .cancel, .tour-leader, .screen {
+  position: absolute;
+  display: block;
+}
+
+.fix, .fix > .head, .fix > .body, .fix > .foot {
+  width: 100%;
+}
+
+.fix > .head {
+  top: 0;
+  height: $fix_head-height;
+
+  background-color: $salmon;
+}
+
+.fix > .body {
+  top: $fix_head-height;
+  bottom: $fix_foot-height;
+
+  /* background-color: rgba(119,245,173, .2); */
+}
+
+.fix > .foot {
+  bottom: 0;
+  height: $fix_foot-height;
+
+  /* background-color: rgba(173,119,245, .2); */
+}
+
+.fix > .body > .cancel {
+  top: 0;
+  right: 0;
+  width: $cancel-size - 2 * $cancel-padding;
+  height: $cancel-size - 2 * $cancel-padding;
+
+  background-color: $salmon;
+
+  padding: $cancel-padding;
+}
+
+$roll_head-height: $fix_head-height + $cancel-size;
+$roll_head-padding: 9px;
+$roll_foot-height: 50px;
+
+$body-bottom-thickness: 2px;
+$body-top-thickness: 2px;
+
+.roll, .roll > .page {
+  height: 100%;
+}
+
+.roll, .page, .page > .head, .page > .body, .page > .foot, .tour-leader, .screen {
+  position: absolute;
+  display: block;
+}
+
+.roll, .page, .page > .body, .page > .foot {
+  width: 100%;
+}
+
+.page > .head {
+  width: calc(100% - 2 * #{$roll_head-padding});
+  height: $cancel-size - 2 * $roll_head-padding;
+}
+
+.page > .head {
+  top: $fix_head-height;
+
+  background-color: rgba(245,173,119, .2);
+}
+
+.page > .head {
+  padding: $roll_head-padding;
+}
+
+.page > .body {
+  top: $roll_head-height + $body-top-thickness;
+  bottom: $roll_foot-height + $body-bottom-thickness;
+
+  background-color: rgba(119,245,173, .2);
+}
+
+.page > .foot {
+  bottom: 0;
+  height: $roll_foot-height;
+
+  background-color: rgba(173,119,245, .2);
+}
+
+.page.one {
+  left: 0;
+}
+
+.page.two {
+  left: 100%;
+}
+
+.roll.on-chat {
+  left: -100%;
+}

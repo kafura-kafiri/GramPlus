@@ -1,0 +1,149 @@
+/* ------------------ *\
+  these are perfect
+\* ------------------ */
+
+$status_height: 70px;
+$status_margin_x: 1px;
+$status_padding: 10px;
+$status_thickness: 1px;
+
+$avatar_width: 35px;
+
+$reply_height: 70px;
+
+$status_background-color: white;
+
+
+.body > .list {
+
+}
+
+.list > .bed-status {
+  margin: 0 $status_margin_x;
+  border-bottom: black solid $status_thickness;
+  background-color: white;
+}
+
+.list > .bed-status {
+  height: $status_height;
+  width: calc(100% - 2 * #{$status_margin_x});
+}
+
+.one-line {
+  text-align: left;
+}
+
+/*------------------------------*\
+    Grid System
+\*------------------------------*/
+
+$mc: 12;
+$m: 0%;
+
+$m_avatar: 10px;
+
+$scw: (100% - ($m * ($mc - 1))) / $mc;
+
+$class-slug: column;
+
+.row,
+.column {
+  box-sizing: border-box;
+}
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+.column {
+  position: relative;
+  float: left;
+  display: block;
+}
+
+.column + .column {
+  margin-left: $m;
+}
+
+.column.column-avatar + .column.column-remaining {
+  margin-left: $m_avatar;
+}
+
+@for $cs from 1 through $mc {
+  .#{$class-slug}-#{$cs} {
+    width: $scw * $cs + $m * ($cs - 1);
+  }
+}
+
+.column-square {
+  width: $status_height;
+}
+
+.column-avatar {
+  width: $avatar_width;
+}
+
+.column-square + .column-remaining {
+  width: calc(100% - #{$m} - #{$status_height});
+}
+
+.column-avatar + .column-remaining {
+  width: calc(100% - #{$m_avatar} - #{$avatar_width});
+}
+
+.column-12, .column-remaining {
+  margin-left: 0;
+}
+
+/*------------------------------*\
+    Styling
+\*------------------------------*/
+
+.column-square, .column-avatar {
+  background-color: rgba(0, 255, 255, .1); /* $status_background-color; */
+  /* width: 20px; */
+}
+
+.column-remaining {
+  background-color: rgba(255, 255, 0, .1); /* $status_background-color;
+  /* width: 20px; */
+}
+
+.column {
+  /* for height */
+  /* height: 100% */ /* $status_height */;
+}
+
+.column {}
+
+.reply > .row > .column {
+  height: $reply_height;
+}
+
+.list > .row > .column {
+  height: $status_height;
+}
+
+.chat > .row > .column-avatar {
+  height: $avatar_width;
+}
+
+.row {
+  /*margin-bottom: 10px;*/
+}
+
+.row:last-child {
+  /*margin-bottom: 0;*/
+}
+
+.column .column {
+  /*color: #eee;
+  background: #333;
+  border-color: #000;*/
+}

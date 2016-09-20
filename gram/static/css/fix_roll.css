@@ -1,0 +1,92 @@
+.html {
+  background-color: #a1948c; }
+
+.tour-leader {
+  background-color: rgba(0, 199, 223, 0.4);
+  right: 0;
+  left: 60px;
+  top: 0;
+  height: 22px;
+  z-index: 199; }
+
+.screen {
+  width: 285px;
+  height: 490px;
+  border-radius: 7px;
+  overflow: visible;
+  background-color: #fde8da; }
+
+.fix {
+  height: 100%; }
+
+.fix, .fix > .head, .fix > .body, .fix > .foot, .fix > .body > .cancel, .tour-leader, .screen {
+  position: absolute;
+  display: block; }
+
+.fix, .fix > .head, .fix > .body, .fix > .foot {
+  width: 100%; }
+
+.fix > .head {
+  top: 0;
+  height: 22px;
+  background-color: #f5ad77; }
+
+.fix > .body {
+  top: 22px;
+  bottom: 10px;
+  /* background-color: rgba(119,245,173, .2); */ }
+
+.fix > .foot {
+  bottom: 0;
+  height: 10px;
+  /* background-color: rgba(173,119,245, .2); */ }
+
+.fix > .body > .cancel {
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-color: #f5ad77;
+  padding: 8px; }
+
+.roll, .roll > .page {
+  height: 100%; }
+
+.roll, .page, .page > .head, .page > .body, .page > .foot, .tour-leader, .screen {
+  position: absolute;
+  display: block; }
+
+.roll, .page, .page > .body, .page > .foot {
+  width: 100%; }
+
+.page > .head {
+  width: calc(100% - 2 * 9px);
+  height: 22px; }
+
+.page > .head {
+  top: 22px;
+  background-color: rgba(245, 173, 119, 0.2); }
+
+.page > .head {
+  padding: 9px; }
+
+.page > .body {
+  top: 64px;
+  bottom: 52px;
+  background-color: rgba(119, 245, 173, 0.2); }
+
+.page > .foot {
+  bottom: 0;
+  height: 50px;
+  background-color: rgba(173, 119, 245, 0.2); }
+
+.page.one {
+  left: 0; }
+
+.page.two {
+  left: 100%; }
+
+.roll.on-chat {
+  left: -100%; }
+
+/*# sourceMappingURL=fix_roll.css.map */

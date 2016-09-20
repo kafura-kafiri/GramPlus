@@ -1,0 +1,42 @@
+$btns-background: #000;
+$btns-cnt: 3;
+$btn-padding: 6px;
+
+.to-the-right {
+  float: right;
+}
+
+.to-the-left {
+  float: left;
+}
+
+.btns.width-fix {
+  width: 100%;
+}
+
+.btns {
+  height: 100%  ;
+}
+
+.btns {
+  background-color: $btns-background;
+}
+
+.for-my-self {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 18px 20px -17px rgba(0, 0, 0, 0.8);
+}
+
+.btns > .btn {
+  width: calc(100% / #{$btns-cnt} - 2 * #{$btn-padding});
+  height: calc(100% - 2 * #{$btn-padding});
+  padding: $btn-padding;
+}
+
+.btns > .btn {
+  background-color: blue;
+}
+
+.btns > .btn:hover{
+  background-color: #7c9192;
+}

@@ -1,0 +1,59 @@
+.capsule {
+  border-radius: 500px;
+  overflow: hidden; }
+
+.capsule.thick.list-chat {
+  display: inline-table;
+  margin-left: calc(50% - 120px);
+  top: -10px; }
+
+.capsule.thick {
+  border: rgba(100, 100, 100, 0.5) 3px solid; }
+
+.capsule.list-chat {
+  width: 165px;
+  height: 30px;
+  background-color: rgba(100, 100, 100, 0.5); }
+
+/* we keep going until z-index lack. */
+.capsule.list-chat {
+  position: relative;
+  z-index: 3; }
+
+.switch {
+  width: 150%; }
+
+.case {
+  /* we have to make it position relative to have permission to set z-index *\
+  \*  */
+  z-index: 5;
+  position: relative;
+  display: inline-block;
+  width: 33.33333%;
+  margin: 0 -2px;
+  border-radius: 4px;
+  color: #f5ad77; }
+
+/* .case {
+  background-color: rgba(100, 100, 100, .1);
+} */
+.case {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  /* the same as your div height */ }
+
+.case.roller {
+  color: red;
+  position: relative;
+  top: 0px; }
+
+.case.roller {
+  left: -165px;
+  z-index: 4;
+  background-color: #fff4fd; }
+
+.case.btn:hover {
+  cursor: pointer; }
+
+/*# sourceMappingURL=capsule.css.map */

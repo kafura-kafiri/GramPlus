@@ -1,0 +1,103 @@
+.right-push {
+  float: right;
+  right: 0; }
+
+.left-push {
+  float: left;
+  left: 0; }
+
+.up-push {
+  top: 0; }
+
+.input-bar.width-fix {
+  width: 100%; }
+
+.input-bar, .text-bar {
+  min-height: 40px;
+  max-height: 90px; }
+
+.input-bar {
+  background-color: #FFF; }
+
+.input-bar, .icon-bar {
+  position: absolute; }
+
+.shadow-effect {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 18px 20px -17px rgba(0, 0, 0, 0.8); }
+
+.icon-bar {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(204, 94, 223, 0.2); }
+
+.text-bar {
+  width: calc(100% - 40px);
+  background-color: rgba(107, 223, 119, 0.2); }
+
+.text-bar {
+  overflow: hidden; }
+
+.icon {
+  height: 22px; }
+
+.icon {
+  width: 22px; }
+
+.icon {
+  margin: 9px; }
+
+/* .icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+} we have it in em */
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus {
+  border: none;
+  outline: none; }
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  /* For Firefox */
+  color: #7c9192; }
+
+.icon-bar .out {
+  background-color: rgba(214, 94, 79, 0.3); }
+
+.out {
+  /* that's experimental and very bad ok ? */
+  width: calc(2.1rem * 5 + 0.2rem + 35px);
+  height: calc(2.1rem * 4 + 0.2rem - 1px); }
+
+.out {
+  padding: 0.4rem; }
+
+.em-holder > .icon {
+  margin: 0.3rem; }
+
+.out.up {
+  bottom: 40px; }
+
+.out.down {
+  top: 40px; }
+
+.out.left {
+  right: 0; }
+
+.out.right {
+  left: 0; }
+
+::-webkit-scrollbar {
+  width: px;
+  position: absolute; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+/*# sourceMappingURL=responsive_input_bar+.css.map */

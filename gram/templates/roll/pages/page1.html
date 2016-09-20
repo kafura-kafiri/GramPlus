@@ -1,0 +1,89 @@
+<div class="head">
+
+  <div class="cancel" style="display: inline-table">
+
+    <div class="rounded btn">
+      <div class="img" style="background-image: url({{ url_for('static', filename='img/cancel/png/cancel.png') }});"></div>
+    </div>
+
+  </div>
+
+  <div class="capsule thick list-chat" style="">
+    <div class="switch">
+      <div class="case btn left" style="background-color: transparent">لیست</div>
+      <div class="case btn right" style="background-color: transparent">چت</div>
+      <div class="case roller" style="display: inline-block; height: 30px;"></div>
+    </div>
+  </div>
+
+  <script>
+    $(function () {
+      $('.case.btn').on('click', function (eve) {
+        var clicked = $(eve.target), roll = clicked.closest('.roll'), screen = roll.closest('.screen');
+        var width = clicked.width();
+        var left = clicked.position().left;
+
+        var move = -2 * width + left * 1.03;
+        var roller = $(eve.target).parent().children('.roller');
+        console.log(roller);
+        roller.animate({
+          left: move
+        }, 200);
+        console.log(roll);
+        console.log(clicked.classList);
+        console.log(screen.width());
+
+        var btn_cancel = screen.find('.cancel > .btn');
+        if (clicked.hasClass('left')) {
+          roll.animate({
+            left: 0
+          });
+          roll.removeClass('on-chat');
+          btn_cancel.addClass('rotate');
+        }
+        else {
+          roll.animate({
+            left: '-100%'
+          });
+          roll.addClass('on-chat');
+          btn_cancel.removeClass('rotate');
+        }
+      });
+
+    });
+  </script>
+
+
+</div>
+<div class="body">
+  <div class="list">
+
+    <!-- it's from list in items -->
+    <div class="bed-status row">
+      <div class="column column-square avatar">
+        <div class="img with-pad circular" style="background-image: url(../img/dermout_power.jpg)"></div>
+      </div>
+      <div class="column column-remaining status" style="padding-left: 5px">
+        <div class="one-line" style="margin-top: 15px">fewioj</div>
+        <div class="one-line lighter">fjeioj</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="foot" style="z-index: 1">
+  <div class="width-fix btns">
+    <div class="btn to-the-left group">
+      <div class="img"
+           style='background-size: contain;background-image: url({{ url_for('static', filename="img/foot_icon/png/add-friend.png") }});'></div>
+    </div>
+    <div class="btn to-the-left radar">
+      <div class="img"
+           style='background-size: contain;background-image: url({{ url_for('static', filename="img/foot_icon/png/technology.png") }});'></div>
+    </div>
+    <div class="btn to-the-left profile">
+      <div class="img"
+           style='background-size: contain;background-image: url({{ url_for('static', filename="img/foot_icon/png/user.png") }});'></div>
+    </div>
+  </div>
+</div>

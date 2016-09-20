@@ -1,0 +1,150 @@
+$input-bar_height-min: 40px;
+$input-bar_height-max: 90px;
+$input-bar_background: #FFF;
+$input-bar_background_out: rgba(214, 94, 79, 0.3);
+
+$icon-padding: 9px;
+
+$text-icon-bar-distance: 3px;
+
+$pointer-color: #333;
+$pointer-animation-duration: .5s;
+
+.right-push {
+  float: right;
+  right: 0;
+}
+
+.left-push {
+  float: left;
+  left: 0;
+}
+
+.up-push {
+  top: 0;
+}
+
+.input-bar.width-fix {
+  width: 100%;
+}
+
+.input-bar, .text-bar {
+  min-height: $input-bar_height-min;
+  max-height: $input-bar_height-max;
+}
+
+.input-bar {
+  background-color: $input-bar_background;
+}
+
+.input-bar, .icon-bar {
+  position: absolute;
+}
+
+.shadow-effect {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 18px 20px -17px rgba(0, 0, 0, 0.8);
+}
+
+.icon-bar {
+  width: $input-bar_height-min;
+  height: $input-bar_height-min;
+  background-color: rgba(204, 94, 223, 0.2);
+}
+
+.text-bar {
+  width: calc(100% - #{$input-bar_height-min});
+  background-color: rgba(107, 223, 119, 0.2);
+}
+
+.text-bar {
+  overflow: hidden;
+}
+
+
+.icon {
+  height: $input-bar_height-min - 2 * $icon-padding;
+}
+
+.icon {
+  width: $input-bar_height-min - 2 * $icon-padding;
+}
+
+.icon {
+  margin: $icon-padding;
+}
+
+/* .icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+} we have it in em */
+
+
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus{
+border:none;
+outline:none;
+}
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+  color: #7c9192;
+}
+
+
+
+.icon-bar .out {
+  background-color: $input-bar_background_out;
+}
+
+$we_do_not_know:1.5rem;
+$out-icon_padding: .4rem;
+$out-icon_margin: .6rem;
+
+$size: $we_do_not_know + $out-icon_margin;
+
+.out { /* that's experimental and very bad ok ? */
+  width: calc(#{$size} * 5 + #{$out-icon_padding * 2 - $out-icon_margin} + 35px);
+  height: calc(#{$size} * 4 + #{$out-icon_padding * 2 - $out-icon_margin} - 1px);
+}
+
+.out {
+  padding: $out-icon_padding;
+}
+
+.em-holder > .icon {
+  margin: $out-icon-margin / 2;
+}
+
+.out.up {
+  bottom: $input-bar_height-min;
+}
+
+.out.down {
+  top: $input-bar_height-min;
+}
+
+.out.left {
+  right: 0;
+}
+
+.out.right {
+  left: 0;
+}
+
+
+::-webkit-scrollbar {
+    width: px;
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}

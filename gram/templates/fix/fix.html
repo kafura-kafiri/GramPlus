@@ -1,0 +1,37 @@
+
+    <div class="head">
+      <div class="marbles inline">
+        <div class="red marble btn"></div>
+        <div class="green marble btn"></div>
+        <div class="yellow marble btn"></div>
+      </div>
+
+      <div class="tour-leader titlebar"></div>
+    </div>
+    <div class="body">
+      <div class="cancel">
+
+        <div class="circular rotate btn">
+          <div class="img" style="background-image: url({{ url_for('static', filename='img/cancel/png/cancel.png') }});"></div>
+        </div>
+
+        <script>
+          $(function() {// jquery has alot of problem
+            $('.cancel > .btn').on('click', function(eve) {
+              var target = $(eve.target), screen = target.closest('.screen'), btn = target.closest('.btn');
+              if(btn.hasClass('rotate')) {
+                //adding <-
+              }
+              else {
+                btn.addClass('rotate');
+                var screen = btn.closest('.screen'), roll = screen.children('.roll'), left_btn = roll.find('.btn.left.case');
+                left_btn.click();
+              }
+            });
+
+          });
+        </script>
+
+      </div>
+    </div>
+    <div class="foot"></div>

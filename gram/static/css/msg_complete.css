@@ -1,0 +1,17 @@
+.text {
+  margin: 10px; }
+
+.reply {
+  margin: 2px 2px 2px 20px; }
+
+.reply > .status {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 30px;
+  left: -30px;
+  color: black; }
+
+.status {
+  color: olive; }
+
+/*# sourceMappingURL=msg_complete.css.map */
