@@ -1,0 +1,90 @@
+<script id='template' type='text/ractive'>
+  <div class="screen" style="overflow: visible">
+
+     <div class="roll">
+       {% include 'roll/roll.html' %}
+     </div>
+
+     <div class="fix">
+       {% include 'fix/fix.html' %}
+     </div>
+
+  </div>
+
+</script>
+<script>
+  var ractive = new Ractive({
+    // The `el` option can be a node, an ID, or a CSS selector.
+    el: '#container',
+
+    // We could pass in a string, but for the sake of convenience
+    // we're passing the ID of the <script> tag above.
+    template: '#template',
+
+    // Here, we're passing in some initial data
+    data: {
+      user: {},
+      gradHotel: [
+        {
+          name: 'ممد و دوستان',
+          id: '<mongo generated id>',
+          you: [
+            {}
+          ],
+          we: [
+            {}
+          ],
+          msgs: []
+        }
+      ],
+      screens: [
+        {
+          hotel: [
+            {
+              name: 'ممد و دوستان',
+              id: '<mongo generated id>',
+              admin: [],
+              member: [],
+              frw: [],
+              msgs: [
+                {
+                  "common": {
+                    "ref": {
+                      "content": {
+                        "img": "$",
+                        "body": "$"
+                      },
+                      "common": {
+                        "ref": {
+                          "content": {
+                            "img": "$",
+                            "body": "$"
+                          },
+                          "common": {
+                            "auth_frw_er": "q-auth",
+                            "date": "$$$ it doesn't matter $$$"
+                          },
+                          "visit": "it doesn't matter"
+                        },
+                        "auth_frw_er": "ans-auth",
+                        "date": "it doesn't matter"
+                      },
+                      "visit": 1
+                    },
+                    "auth_frw_er": "",
+                    "date": "it does matter"
+                  },
+                  "bed": "it doesn't matter",
+                  "seen": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          hotel: []
+        }
+      ]
+    }
+  });
+</script>

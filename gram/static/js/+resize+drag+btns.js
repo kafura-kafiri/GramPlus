@@ -1,3 +1,55 @@
+// page1 head capsule
+    $(function () {
+      $('.case.btn').on('click', function (eve) {
+        var clicked = $(eve.target), roll = clicked.closest('.roll'), screen = roll.closest('.screen');
+        var width = clicked.width();
+        var left = clicked.position().left;
+
+        var move = -2 * width + left * 1.03;
+        var roller = $(eve.target).parent().children('.roller');
+        console.log(roller);
+        roller.animate({
+          left: move
+        }, 200);
+        console.log(roll);
+        console.log(clicked.classList);
+        console.log(screen.width());
+
+        var btn_cancel = screen.find('.cancel > .btn');
+        if (clicked.hasClass('left')) {
+          roll.animate({
+            left: 0
+          });
+          roll.removeClass('on-chat');
+          btn_cancel.addClass('rotate');
+        }
+        else {
+          roll.animate({
+            left: '-100%'
+          });
+          roll.addClass('on-chat');
+          btn_cancel.removeClass('rotate');
+        }
+      });
+
+    });
+
+//jigul
+          $(function() {// jquery has alot of problem
+            $('.cancel > .btn').on('click', function(eve) {
+              var target = $(eve.target), screen = target.closest('.screen'), btn = target.closest('.btn');
+              if(btn.hasClass('rotate')) {
+                //adding <-
+              }
+              else {
+                btn.addClass('rotate');
+                var screen = btn.closest('.screen'), roll = screen.children('.roll'), left_btn = roll.find('.btn.left.case');
+                left_btn.click();
+              }
+            });
+
+          });
+
   $(function () {
     $('.screen').resizable({
       minHeight: 490,

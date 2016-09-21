@@ -1,0 +1,26 @@
+{
+  "msg": {
+    "content": {
+      "body": ""
+    },
+    "common": {
+      "ref": "",
+      "auth_frw_er": "",
+      "date": ""
+    },
+    "visit": 1
+  },
+  "frw": {
+    "common": "",
+    "bed": "",
+    "seen": false
+  },
+  "bed": {
+    "admin": [],
+    "member": [],
+    "frw": []
+  },
+  "usr": {
+    "name": ""
+  }
+}

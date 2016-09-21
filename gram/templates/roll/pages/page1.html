@@ -10,48 +10,14 @@
 
   <div class="capsule thick list-chat" style="">
     <div class="switch">
-      <div class="case btn left" style="background-color: transparent">لیست</div>
-      <div class="case btn right" style="background-color: transparent">چت</div>
+      {% raw %}
+      <div class="case btn left" style="background-color: transparent">{{ screen[0].capsule.cases.left }}</div>
+      <div class="case btn right" style="background-color: transparent">{{ screen[0].capsule.cases.right }}</div>
       <div class="case roller" style="display: inline-block; height: 30px;"></div>
+      {% endraw %}
     </div>
   </div>
 
-  <script>
-    $(function () {
-      $('.case.btn').on('click', function (eve) {
-        var clicked = $(eve.target), roll = clicked.closest('.roll'), screen = roll.closest('.screen');
-        var width = clicked.width();
-        var left = clicked.position().left;
-
-        var move = -2 * width + left * 1.03;
-        var roller = $(eve.target).parent().children('.roller');
-        console.log(roller);
-        roller.animate({
-          left: move
-        }, 200);
-        console.log(roll);
-        console.log(clicked.classList);
-        console.log(screen.width());
-
-        var btn_cancel = screen.find('.cancel > .btn');
-        if (clicked.hasClass('left')) {
-          roll.animate({
-            left: 0
-          });
-          roll.removeClass('on-chat');
-          btn_cancel.addClass('rotate');
-        }
-        else {
-          roll.animate({
-            left: '-100%'
-          });
-          roll.addClass('on-chat');
-          btn_cancel.removeClass('rotate');
-        }
-      });
-
-    });
-  </script>
 
 
 </div>

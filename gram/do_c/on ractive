@@ -1,0 +1,7 @@
+emojies come from db that are set for each profile.
+lang sets from flask so we need for each writing.
+friends and groups are sets from db.
+room <- it's a good name.
+rooms can be a lot
+
+if hotel of a screen is empty it show grand hotel info.

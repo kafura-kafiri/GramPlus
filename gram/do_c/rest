@@ -1,0 +1,12 @@
+we need to store for each msg . does this user seen it ?
+
+a list how to ajax it ?
+
+@login_required
+search(query)
+
+@login_required
+lasts(unseen=True)
+
+block(num) ->
+block(date) ->

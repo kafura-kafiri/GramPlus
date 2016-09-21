@@ -23,6 +23,7 @@ def index():
                 'head': [
                     'lib/jquery-3.1.0.js',
                     'lib/jquery-ui-1.12.1.custom/jquery-ui.js',
+                    'lib/ractive/0.7.3.js',
                 ],
                 'body': [
                     'js/+resize+drag+btns.js',

@@ -1,0 +1,77 @@
+{
+  "put": {
+    "method": "PUT",
+    "data": {
+      "content": {
+        "body": "**",
+        "url": ""
+      },
+      "common": {
+        "rf_id": "if missed we set _id to it so if we don't have content we don't give a shit, if rf_id != _id it's a rpl",
+        "auth_frw_er": "come from authority",
+        "date": "set with system's now()"
+      },
+      "bed": "**"
+    }
+  },
+  "get": {
+    "frw": {
+      "common": {
+        "ref": "",
+        "auth_frw_er": "",
+        "date": ""
+      },
+      "bed": "",
+      "seen": false
+    },
+    "frw-ex": {
+      "common": {
+        "ref": {
+          "content": {
+            "body": ""
+          },
+          "common": {
+            "ref": "",
+            "auth_frw_er": "",
+            "date": ""
+          },
+          "visit": 1
+        },
+        "auth_frw_er": "",
+        "date": ""
+      },
+      "bed": "",
+      "seen": false
+    },
+    "frw-ex-ex": {
+      "common": {
+        "ref": {
+          "content": {
+            "img": "$",
+            "body": "$"
+          },
+          "common": {
+            "ref": {
+              "content": {
+                "img": "$",
+                "body": "$"
+              },
+              "common": {
+                "auth_frw_er": "q-auth",
+                "date": "$$$ it doesn't matter $$$"
+              },
+              "visit": "it doesn't matter"
+            },
+            "auth_frw_er": "ans-auth",
+            "date": "it doesn't matter"
+          },
+          "visit": 1
+        },
+        "auth_frw_er": "",
+        "date": "it does matter"
+      },
+      "bed": "it doesn't matter",
+      "seen": false
+    }
+  }
+}

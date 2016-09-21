@@ -1,0 +1,68 @@
+body, html{
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+*{
+  -moz-box-sizing: border-box;
+	   box-sizing: border-box;
+}
+/*! PocketGrid 1.1.0
+* Copyright 2013 Arnaud Leray
+* MIT License
+*/.block-group,.block,.block-group:after,.block:after,.block-group:before,.block:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.block-group{*zoom:1}
+.block-group:before,.block-group:after{display:table;content:"";line-height:0}
+.block-group:after{clear:both}
+.block-group{list-style-type:none;padding:0;margin:0}
+.block-group>.block-group{clear:none;float:left;margin:0 !important}
+.block{float:left;width:100%}
+
+#grid{
+	width:100%;
+	height: 90%;
+	border: 10px solid white;
+}
+.element{
+	padding: 2px;
+	font-size: 11px;
+	border: 1px solid #F2F2F2;
+}
+.b1, .b2{
+	width: 15%;
+	text-align: left;
+	padding-top: 12px;
+}
+.b2 select{
+	width: 100%;
+	display: block;
+	padding-top: 8px;
+}
+.b3{
+	width: 5%;
+	padding-top: 12px;
+}
+.b4{
+	text-align: right;
+	width: 10%;
+	padding-right: 30px;
+	padding-top: 12px;
+}
+.disabled *{
+	color: #CCC !important;
+}
+.red{
+	color: #DD562D;
+}
+.green{
+	color: #76C2AF;
+}
+.b6{
+	width: 10%;
+	text-align: center;
+	padding-top: 12px;
+}
+.b7{
+	width: 15%;
+}
